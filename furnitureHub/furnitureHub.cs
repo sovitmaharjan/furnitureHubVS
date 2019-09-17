@@ -16,6 +16,12 @@ namespace furnitureHub {
             return "http://localhost:10001";
         }
 
+        //--------------------------------------------registration--------------------------------------------
+        public void register(string userName, string password) {
+        
+
+        }
+
         //--------------------------------------------global function somthing like that--------------------------------------------
         public DataTable queryFunction(string query) {
 
@@ -34,12 +40,18 @@ namespace furnitureHub {
             SqlCommand command = new SqlCommand(query, connection);
             connection.Close();
         }
+
+        public DataTable getNewTableId(string tableName) {
+
+            string query = "exec getNewTableId '" + tableName + "'";
+            return queryFunction(query);
+        }
         
 
         //--------------------------------------------customer--------------------------------------------
         public DataTable customerList() {
 
-            string query = "SELECT * FROM viewCustomer";
+            string query = "select * from viewCustomer";
             return queryFunction(query);
         }
 
@@ -47,19 +59,19 @@ namespace furnitureHub {
         //--------------------------------------------employee--------------------------------------------
         public DataTable employeeList() {
 
-            string query = "SELECT * FROM viewEmployee";
+            string query = "select * from viewEmployee";
             return queryFunction(query);
         }
 
         public DataTable getEmployeeById(int id) {
 
-            string query = "SELECT * FROM viewEmployee where id =" + id;
+            string query = "select * from viewEmployee where id =" + id;
             return queryFunction(query);
         }
 
         public DataTable itemList(int orderId) {
 
-            string query = "SELECT * FROM tblOrderDetail where orderId =" + orderId;
+            string query = "select * from tblOrderDetail where orderId =" + orderId;
             return queryFunction(query);
         }
 

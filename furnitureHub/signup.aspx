@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="furnitureHub.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="furnitureHub.signup" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,40 +70,36 @@
                                 <div class="account-content">
                                     <form class="form-horizontal" runat="server">
 
+                                        <%--<div class="form-group ">
+                                            <div class="col-xs-12">
+                                                <input class="form-control" type="email" required="" placeholder="Email">
+                                            </div>
+                                        </div>--%>
+
                                         <div class="form-group ">
                                             <div class="col-xs-12">
-                                                <input class="form-control" type="text" placeholder="Username">
+                                                <input class="form-control" id="userNameAspx" type="text" required="" placeholder="Username" runat="server">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <div class="col-xs-12">
-                                                <input class="form-control" type="password" placeholder="Password">
+                                                <input class="form-control" id="passwordAspx" type="password" required="" placeholder="Password" runat="server">
                                             </div>
                                         </div>
 
-                                        <!--<div class="form-group">
+                                        <%--<div class="form-group">
                                             <div class="col-xs-12">
                                                 <div class="checkbox checkbox-success">
-                                                    <input id="checkbox-signup" type="checkbox" checked="">
-                                                    <label for="checkbox-signup">
-                                                        Remember me
-                                                    </label>
+                                                    <input id="checkbox-signup" type="checkbox" checked="checked">
+                                                    <label for="checkbox-signup">I accept <a href="#">Terms and Conditions</a></label>
                                                 </div>
-
                                             </div>
-                                        </div>
-
-                                        <div class="form-group text-center m-t-30">
-                                            <div class="col-sm-12">
-                                                <a href="page-recoverpw.html" class="text-muted"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
-                                            </div>
-                                        </div>-->
+                                        </div>--%>
 
                                         <div class="form-group account-btn text-center m-t-10">
                                             <div class="col-xs-12">
-                                                <!--<asp:button class="btn w-md btn-bordered btn-danger waves-effect waves-light" id="clickMeButton" runat="server" text="Log In" onClick="loginClick" />-->
-                                                <button class="btn w-md btn-bordered btn-danger waves-effect waves-light" type="submit" onserverclick="loginClick" runat="server">Log In</button>
+                                                <button class="btn w-md btn-bordered btn-danger waves-effect waves-light" type="submit" onserverclick="register" runat="server">Register </button>
                                             </div>
                                         </div>
 
@@ -118,7 +114,7 @@
 
                             <div class="row m-t-50">
                                 <div class="col-sm-12 text-center">
-                                    <p class="text-muted">Don't have an account? <a href="<%=this.baseUrl%>/signup.aspx" class="text-primary m-l-5"><b>Sign Up</b></a></p>
+                                    <p class="text-muted">Already have account?<a href="<%=this.baseUrl%>" class="text-primary m-l-5"><b>Sign In</b></a></p>
                                 </div>
                             </div>
 

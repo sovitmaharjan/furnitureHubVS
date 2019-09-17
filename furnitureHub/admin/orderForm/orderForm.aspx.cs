@@ -25,13 +25,16 @@ namespace furnitureHub.admin.orderFrom {
             string id = Request.Params["d752ebede1f7f7cb0b54f0d726270929"];
             if(string.IsNullOrEmpty(id)) {
 
-                DataTable dataTable = furnitureHubObject.getNewOrderId();
+                string tblOrder = "tblOrder";
+                DataTable dataTable = furnitureHubObject.getNewTableId(tblOrder);
                 orderIdAspx.Value = dataTable.Rows[0]["id"].ToString();
 
-                dataTable = furnitureHubObject.getNewCustomerId();
+                string tblCustomer = "tblCustomer";
+                dataTable = furnitureHubObject.getNewTableId(tblCustomer);
                 customerIdAspx.Value = dataTable.Rows[0]["id"].ToString();
 
-                dataTable = furnitureHubObject.getNewPaymentId();
+                string tblPayment = "tblPayment";
+                dataTable = furnitureHubObject.getNewTableId(tblPayment);
                 paymentIdAspx.Value = dataTable.Rows[0]["id"].ToString();
             } else {
 

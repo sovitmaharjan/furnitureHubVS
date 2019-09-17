@@ -54,7 +54,7 @@ namespace furnitureHub.admin.orderFrom {
             foreach (DataRow value in dataTable.Rows)
             {
 
-                array[i] = value["name"] + "./." + value["deliveryDate"] + "./." + value["price"];
+                array[i] = value["name"] + "./." + Convert.ToDateTime(value["deliveryDate"]).ToString("yyyy-MM-dd") + "./." + value["price"];
                 i++;
             }
             return array;

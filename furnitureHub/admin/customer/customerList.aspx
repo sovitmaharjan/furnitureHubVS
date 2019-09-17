@@ -68,6 +68,7 @@
                                                     <tr>
                                                         <th>S. No. </th>
                                                         <th>Item </th>
+                                                        <th>Delivery </th>
                                                         <th>Price </th>
                                                     </tr>
                                                 </thead>
@@ -120,6 +121,7 @@
                             var item = e.split('./.');
                             tableRow += '<td>' + i + '</td>';
                             tableRow += '<td>' + item[0] + '</td>';
+                            tableRow += '<td>' + item[1] + '</td>';
                             tableRow += '<td>Rs. ' + item[2] + '</td>';
                             tableRow += '</tr>';
                             i++;

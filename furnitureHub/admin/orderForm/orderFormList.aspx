@@ -58,6 +58,7 @@
                                                     <tr>
                                                         <th>S. No. </th>
                                                         <th>Item </th>
+                                                        <th>Delievery Date </th>
                                                         <th>Price </th>
                                                     </tr>
                                                 </thead>
@@ -87,6 +88,7 @@
 
                 var orderId = this.id;
                 var tableRow = "";
+                console.log("orderId");
                 console.log(orderId);
                 $.ajax({
 
@@ -97,7 +99,7 @@
                     dataType: 'json',
                     success: function(data) {
 
-                        //console.log(data);
+                        console.log(data);
                         var data = data.d;
                         var i = 1;
                         $('#itemTableBody').html(" ");
@@ -108,8 +110,9 @@
                             tableRow += '<tr>';
                             var item = e.split('./.');
                             tableRow += '<td>' + i + '</td>';
+                            tableRow += '<td>' + item[0] + '</td>';
                             tableRow += '<td>' + item[1] + '</td>';
-                            tableRow += '<td>Rs. ' + item[3] + '</td>';
+                            tableRow += '<td>Rs. ' + item[2] + '</td>';
                             tableRow += '</tr>';
                             i++;
                         })
