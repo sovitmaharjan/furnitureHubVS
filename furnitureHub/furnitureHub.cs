@@ -55,6 +55,11 @@ namespace furnitureHub {
             return queryFunction(query);
         }
 
+        public DataTable itemList(int orderId) {
+
+            string query = "select * from tblOrderDetail where orderId =" + orderId;
+            return queryFunction(query);
+        }
 
         //--------------------------------------------employee--------------------------------------------
         public DataTable employeeList() {
@@ -63,41 +68,11 @@ namespace furnitureHub {
             return queryFunction(query);
         }
 
-        public DataTable getEmployeeById(int id) {
-
-            string query = "select * from viewEmployee where id =" + id;
-            return queryFunction(query);
-        }
-
-        public DataTable itemList(int orderId) {
-
-            string query = "select * from tblOrderDetail where orderId =" + orderId;
-            return queryFunction(query);
-        }
-
         //--------------------------------------------orderForm--------------------------------------------
 
         public DataTable orderFormList() {
 
             string query = "select * from viewOrder";
-            return queryFunction(query);
-        }
-
-        public DataTable getNewOrderId() {
-
-            string query = "exec getNewOrderId";
-            return queryFunction(query);
-        }
-
-        public DataTable getNewCustomerId() {
-
-            string query = "exec getNewCustomerId";
-            return queryFunction(query);
-        }
-
-        public DataTable getNewPaymentId() {
-
-            string query = "exec getNewPaymentId";
             return queryFunction(query);
         }
 
