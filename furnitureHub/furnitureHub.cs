@@ -16,12 +16,6 @@ namespace furnitureHub {
             return "http://localhost:10001";
         }
 
-        //--------------------------------------------registration--------------------------------------------
-        public void register(string userName, string password) {
-        
-
-        }
-
         //--------------------------------------------global function somthing like that--------------------------------------------
         public DataTable queryFunction(string query) {
 
@@ -47,6 +41,18 @@ namespace furnitureHub {
             return queryFunction(query);
         }
         
+        //--------------------------------------------registration--------------------------------------------
+        public DataTable register(int id, string userName, string password) {
+
+            int status = 0;
+            string query = "exec register '"
+                + id + "', '"
+                + userName + "', '"
+                + password + "', '"
+                + status + "'";
+            return queryFunction(query);
+        }
+
 
         //--------------------------------------------customer--------------------------------------------
         public DataTable customerList() {
@@ -76,7 +82,7 @@ namespace furnitureHub {
             return queryFunction(query);
         }
 
-        public void saveOrder(
+        public DataTable saveOrder(
 
             int orderId,
             string orderDate,
@@ -105,7 +111,7 @@ namespace furnitureHub {
             string factoryForm,
             string handledBy
         ) {
-            string query = "exec saveOrder"
+            string query = "exec saveOrder "
                 + orderId + ", "
                 + orderDate + ", "
                 + customerId + ", "
@@ -133,10 +139,10 @@ namespace furnitureHub {
                 + productionForm + ", "
                 + factoryForm + ", "
                 + handledBy;
-            voidQueryFunction(query);
+            return queryFunction(query);
         }
 
-        public void saveOrderDetail(
+        public DataTable saveOrderDetail(
 
             int itemId,
             string itemName,
@@ -150,7 +156,7 @@ namespace furnitureHub {
                 + itemDate + ", "
                 + itemPrice + ", "
                 + orderId;
-            voidQueryFunction(query);
+            return queryFunction(query);
         }
     }
 }

@@ -25,7 +25,6 @@ namespace furnitureHub.admin.orderFrom {
 
             DataTable dataTable = furnitureHubObject.orderFormList();
             string tableBodyRow = "";
-            int i = 1;
             foreach (DataRow value in dataTable.Rows)
             {
 

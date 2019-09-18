@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace furnitureHub {
 
@@ -25,10 +26,14 @@ namespace furnitureHub {
 
         public void register(object sender, System.EventArgs e) {
 
+            string tblUserlist = "tblUserlist";
+            DataTable dataTable = furnitureHubObject.getNewTableId(tblUserlist);
+            int id = Convert.ToInt32(dataTable.Rows[0]["id"]);
             string userName = userNameAspx.Value;
             string password = passwordAspx.Value;
-            furnitureHubObject.register(userName, password);
-            Response.Redirect("admin/dashboard/dashboard.aspx");
+
+            furnitureHubObject.register(id, userName, password);
+            Response.Redirect("Default.aspx");
         }
     }
 }
