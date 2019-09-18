@@ -30,7 +30,7 @@ namespace furnitureHub {
                 }
                 if (Session["message"].ToString() == "1") {
 
-                    message.Text = "<div class='alert alert-danger' id='message' role='alert'>Waiting for <strong>Admin </strong>approval. Please contact the <strong>Admin </strong></div>";
+                    message.Text = "<div class='alert alert-danger' id='message' role='alert'>This <strong>User </strong>is temporarily disabled. </div>";
                     timeScript.Text = "<script>setTimeout(function() {$('#message').fadeOut('fast');}, 5000);</script>";
                 }
             }
@@ -45,13 +45,13 @@ namespace furnitureHub {
 
             //message:
             //0 = username doesnot exist
-            //1 = username exist but not approved by admin
-            //else ok
+            //1 = username exist but inactive
+            //2 = username exist and active
+            //3 = logout
 
             //status:
-            //0 = username exist but not approved by admin
-            //1 = username exist and approved by admin
-            //else doesnot exist
+            //0 = inactive user
+            //1 = active user
 
             string userName = userNameAspx.Value;
             string password = passwordAspx.Value;
@@ -60,27 +60,26 @@ namespace furnitureHub {
 
                 string sessionUserName = dataTable.Rows[0]["username"].ToString();
                 string sessionPassword = dataTable.Rows[0]["password"].ToString();
-                string sessionType = dataTable.Rows[0]["type"].ToString();
+                int sessionType = Convert.ToInt32(dataTable.Rows[0]["type"]);
                 int sessionStatus = Convert.ToInt32(dataTable.Rows[0]["status"]);
-                if (sessionStatus == 0) {
+                Session["userName"] = sessionUserName;
+                Session["password"] = sessionPassword;
+                Session["type"] = sessionType;
+                if (sessionStatus == 1) {
 
-                    Session["userName"] = sessionUserName;
-                    Session["password"] = sessionPassword;
                     Session["message"] = 1;
-                    Response.Redirect("superVisior/dashboard/dashboard.aspx");
-                }
-                if(sessionStatus == 1) {
+                    if(sessionType == 0){
 
-                    Session["userName"] = sessionUserName;
-                    Session["password"] = sessionPassword;
-                    Session["message"] = 1;
-                    Response.Redirect("superVisior/dashboard/dashboard.aspx");
+                        Response.Redirect("admin/dashboard/dashboard.aspx");
+                    }
+                    if(sessionType == 1){
+
+                        Response.Redirect("supervisior/dashboard/dashboard.aspx");
+                    }
                 } else {
 
-                    Session["userName"] = sessionUserName;
-                    Session["password"] = sessionPassword;
                     Session["message"] = 1;
-                    Response.Redirect("admin/dashboard/dashboard.aspx");                    
+                    Response.Redirect("Default.aspx");                    
                 }
             } else {
 
