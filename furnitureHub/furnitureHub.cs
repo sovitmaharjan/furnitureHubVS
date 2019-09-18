@@ -36,9 +36,9 @@ namespace furnitureHub {
         //}
 
         //--------------------------------------------login--------------------------------------------
-        public DataTable loginCheck(string userName, string password) {
+        public DataTable getLoginData(string userName, string password) {
 
-            string query = "select * from tblUserList where ";
+            string query = "select * from tblUserList where userName = '" + userName + "' and password = '" + password + "'";
             return queryFunction(query);
         }
         
