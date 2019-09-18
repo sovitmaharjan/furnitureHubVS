@@ -72,13 +72,13 @@
 
                                         <div class="form-group ">
                                             <div class="col-xs-12">
-                                                <input class="form-control" type="text" placeholder="Username">
+                                                <input class="form-control" id="userNameAspx" type="text" required="" placeholder="Username" runat="server">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <div class="col-xs-12">
-                                                <input class="form-control" type="password" placeholder="Password">
+                                                <input class="form-control" id="passwordAspx" type="password" required="" placeholder="Password" runat="server">
                                             </div>
                                         </div>
 
@@ -102,8 +102,8 @@
 
                                         <div class="form-group account-btn text-center m-t-10">
                                             <div class="col-xs-12">
-                                                <!--<asp:button class="btn w-md btn-bordered btn-danger waves-effect waves-light" id="clickMeButton" runat="server" text="Log In" onClick="loginClick" />-->
-                                                <button class="btn w-md btn-bordered btn-danger waves-effect waves-light" type="submit" onserverclick="loginClick" runat="server">Log In</button>
+                                                <asp:button CssClass="btn w-md btn-bordered btn-danger waves-light" runat="server" text="Log In" onClick="loginClick" />
+                                                <%--<button class="btn w-md btn-bordered btn-danger waves-effect waves-light" type="submit" onserverclick="loginClick" runat="server">Log In</button>--%>
                                             </div>
                                         </div>
 

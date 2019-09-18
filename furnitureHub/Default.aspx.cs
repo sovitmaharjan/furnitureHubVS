@@ -16,6 +16,9 @@ namespace furnitureHub {
 
         public void loginClick(object sender, System.EventArgs e) {
 
+            string userName = userNameAspx.Value;
+            string password = passwordAspx.Value;
+            furnitureHubObject.loginCheck(userName, password);
             Response.Redirect("admin/dashboard/dashboard.aspx");
         }
 

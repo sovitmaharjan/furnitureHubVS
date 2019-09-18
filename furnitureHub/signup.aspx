@@ -88,6 +88,13 @@
                                             </div>
                                         </div>
 
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <input class="form-control" id="retypePasswordAspx" type="password" required="" placeholder="Password" runat="server">
+                                                <span id='message'></span>
+                                            </div>
+                                        </div>
+
                                         <%--<div class="form-group">
                                             <div class="col-xs-12">
                                                 <div class="checkbox checkbox-success">
@@ -99,7 +106,7 @@
 
                                         <div class="form-group account-btn text-center m-t-10">
                                             <div class="col-xs-12">
-                                                <button class="btn w-md btn-bordered btn-danger waves-effect waves-light" type="submit" onserverclick="register" runat="server">Register </button>
+                                                <asp:Button class="btn w-md btn-bordered btn-danger waves-light" runat="server" Text="Register" onclick="register" />
                                             </div>
                                         </div>
 
@@ -144,6 +151,20 @@
         <!-- App js -->
         <script src="<%=this.baseUrl%>/assets/js/jquery.core.js"></script>
         <script src="<%=this.baseUrl%>/assets/js/jquery.app.js"></script>
+
+        <script>
+            $('#<%=passwordAspx.ClientID%>, #<%=retypePasswordAspx.ClientID%>').on('keyup', function () {
+
+                console.log($(this).val());
+                if ($('#<%=passwordAspx.ClientID%>').val() == $('#<%=retypePasswordAspx.ClientID%>').val()) {
+
+                    $('#message').html('');
+                } else {
+
+                    $('#message').html("password didn't match").css('color', 'red');
+                }
+            });
+        </script>
 
     </body>
 </html>

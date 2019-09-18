@@ -28,16 +28,17 @@ namespace furnitureHub {
             return dataTable;
         }
 
-        public void voidQueryFunction(string query) {
+        //public void voidQueryFunction(string query) {
 
-            connection.Open();
-            SqlCommand command = new SqlCommand(query, connection);
-            connection.Close();
-        }
+        //    connection.Open();
+        //    SqlCommand command = new SqlCommand(query, connection);
+        //    connection.Close();
+        //}
 
-        public DataTable getNewTableId(string tableName) {
+        //--------------------------------------------login--------------------------------------------
+        public DataTable loginCheck(string userName, string password) {
 
-            string query = "exec getNewTableId '" + tableName + "'";
+            string query = "select * from tblUserList where ";
             return queryFunction(query);
         }
         
@@ -50,6 +51,14 @@ namespace furnitureHub {
                 + userName + "', '"
                 + password + "', '"
                 + status + "'";
+            return queryFunction(query);
+        }
+
+        //--------------------------------------------generates new table id--------------------------------------------
+
+        public DataTable getNewTableId(string tableName) {
+
+            string query = "exec getNewTableId '" + tableName + "'";
             return queryFunction(query);
         }
 
