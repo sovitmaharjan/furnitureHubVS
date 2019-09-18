@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/furnitureHubMaster.Master" AutoEventWireup="true" CodeBehind="customerList.aspx.cs" Inherits="furnitureHub.admin.customer.customerList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/furnitureHubAdmin.Master" AutoEventWireup="true" CodeBehind="customerList.aspx.cs" Inherits="furnitureHub.admin.customer.customerList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="content" runat="server">
     <!-- Start content -->
     <div class="content">
@@ -92,16 +92,16 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
     <script>
-        $(document).ready(function() {
-        
+        $(document).ready(function () {
+
             $('.item').on('click', function () {
-                
+
                 var orderId = this.id;
                 var tableRow = "";
                 //console.log(orderId);
-                
+
                 $.ajax({
-                    
+
                     method: 'post',
                     data: '{orderId:' + orderId + '}',
                     url: 'customerList.aspx/getItemById',
@@ -133,7 +133,7 @@
                         alert('error');
                     }
                 })
-                
+
             })
         })
     </script>

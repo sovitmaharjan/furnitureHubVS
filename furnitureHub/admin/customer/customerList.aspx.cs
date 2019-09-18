@@ -9,7 +9,6 @@ using System.Web.Services;
 
 namespace furnitureHub.admin.customer {
     public partial class customerList: System.Web.UI.Page {
-
         furnitureHub furnitureHubObject = new furnitureHub();
         static furnitureHub staticFurnitureHubObject = new furnitureHub();
 
@@ -26,7 +25,7 @@ namespace furnitureHub.admin.customer {
             DataTable dataTable = furnitureHubObject.customerList();
             string tableBodyRow = "";
             int i = 1;
-            foreach(DataRow value in dataTable.Rows) {
+            foreach (DataRow value in dataTable.Rows) {
 
                 tableBodyRow += "<tr>";
                 tableBodyRow += "<td>" + i + "</td>";
@@ -49,7 +48,7 @@ namespace furnitureHub.admin.customer {
             int count = dataTable.Rows.Count;
             string[] array = new string[count];
             int i = 0;
-            foreach(DataRow value in dataTable.Rows) {
+            foreach (DataRow value in dataTable.Rows) {
 
                 array[i] = value["name"] + "./." + Convert.ToDateTime(value["deliveryDate"]).ToString("yyyy-MM-dd") + "./." + value["price"];
                 i++;

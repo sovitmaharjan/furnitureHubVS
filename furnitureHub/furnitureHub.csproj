@@ -163,6 +163,10 @@
     <Content Include="assets\plugins\tinymce\skins\lightgray\fonts\tinymce.woff" />
     <Content Include="assets\plugins\tinymce\themes\inlite\src\test\.eslintrc" />
     <Content Include="furnitureHubMaster.Master" />
+    <Content Include="admin\furnitureHubAdmin.Master" />
+    <Content Include="supervisior\furnitureHubSupervisior.Master" />
+    <Content Include="supervisor\Dashboard\Dashboard.aspx" />
+    <Content Include="supervisor\furnitureHubSupervisor.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1188,6 +1192,13 @@
     <Compile Include="admin\dashboard\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\furnitureHubAdmin.Master.cs">
+      <DependentUpon>furnitureHubAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\furnitureHubAdmin.Master.designer.cs">
+      <DependentUpon>furnitureHubAdmin.Master</DependentUpon>
+    </Compile>
     <Compile Include="admin\orderForm\orderForm.aspx.cs">
       <DependentUpon>orderForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1231,6 +1242,27 @@
     </Compile>
     <Compile Include="supervisior\Dashboard\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisior\furnitureHubSupervisior.Master.cs">
+      <DependentUpon>furnitureHubSupervisior.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisior\furnitureHubSupervisior.Master.designer.cs">
+      <DependentUpon>furnitureHubSupervisior.Master</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor\Dashboard\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisor\Dashboard\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor\furnitureHubSupervisor.Master.cs">
+      <DependentUpon>furnitureHubSupervisor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisor\furnitureHubSupervisor.Master.designer.cs">
+      <DependentUpon>furnitureHubSupervisor.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

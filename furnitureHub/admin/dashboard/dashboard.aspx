@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/furnitureHubMaster.Master" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="furnitureHub.admin.dashboard.dashboard" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/furnitureHubAdmin.Master" AutoEventWireup="true" CodeBehind="dashboard.aspx.cs" Inherits="furnitureHub.admin.dashboard.dashboard" %>
 <asp:Content id="Content1" ContentPlaceHolderID="content" runat="server">
     <!-- Start content -->
     <div class="content">
