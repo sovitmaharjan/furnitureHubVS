@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace furnitureHub.superVisior.Dashboard {
+namespace furnitureHub.supervisior.Dashboard {
     public partial class dashboard: System.Web.UI.Page {
 
         furnitureHub furnitureHubObject = new furnitureHub();

@@ -13,6 +13,15 @@ namespace furnitureHub {
     public partial class Default {
         
         /// <summary>
+        /// message control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal message;
+        
+        /// <summary>
         /// userNameAspx control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,14 @@ namespace furnitureHub {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputPassword passwordAspx;
+        
+        /// <summary>
+        /// timeScript control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal timeScript;
     }
 }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace furnitureHub.superVisior.Dashboard {
+namespace furnitureHub.supervisior.Dashboard {
 
 
     public partial class dashboard {

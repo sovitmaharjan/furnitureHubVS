@@ -70,6 +70,8 @@
                                 <div class="account-content">
                                     <form class="form-horizontal" runat="server">
 
+                                        <asp:Literal ID="message" runat="server"></asp:Literal>
+                                        
                                         <div class="form-group ">
                                             <div class="col-xs-12">
                                                 <input class="form-control" id="userNameAspx" type="text" required="" placeholder="Username" runat="server">
@@ -149,5 +151,6 @@
         <script src="<%=this.baseUrl%>/assets/js/jquery.core.js"></script>
         <script src="<%=this.baseUrl%>/assets/js/jquery.app.js"></script>
 
+        <asp:Literal ID="timeScript" runat="server"></asp:Literal>
     </body>
 </html>

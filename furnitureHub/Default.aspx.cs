@@ -11,11 +11,47 @@ namespace furnitureHub {
 
         furnitureHub furnitureHubObject = new furnitureHub();
 
+        public string baseUrl {
+
+            get {
+
+                return furnitureHubObject.baseUrl();
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e) {
 
+            if (Session["message"] != null) {
+
+                if(Session["message"].ToString() == "0"){
+
+                    message.Text = "<div class='alert alert-danger' id='message' role='alert'><strong>Invalid </strong> Data</div>";
+                    timeScript.Text = "<script>setTimeout(function() {$('#message').fadeOut('fast');}, 5000);</script>";
+                }
+                if (Session["message"].ToString() == "1") {
+
+                    message.Text = "<div class='alert alert-danger' id='message' role='alert'>Waiting for <strong>Admin </strong>approval. Please contact the <strong>Admin </strong></div>";
+                    timeScript.Text = "<script>setTimeout(function() {$('#message').fadeOut('fast');}, 5000);</script>";
+                }
+            }
+            
         }
 
         public void loginClick(object sender, System.EventArgs e) {
+
+            //usertype:
+            //0 = admin
+            //1 = supervisior
+
+            //message:
+            //0 = username doesnot exist
+            //1 = username exist but not approved by admin
+            //else ok
+
+            //status:
+            //0 = username exist but not approved by admin
+            //1 = username exist and approved by admin
+            //else doesnot exist
 
             string userName = userNameAspx.Value;
             string password = passwordAspx.Value;
@@ -24,24 +60,32 @@ namespace furnitureHub {
 
                 string sessionUserName = dataTable.Rows[0]["username"].ToString();
                 string sessionPassword = dataTable.Rows[0]["password"].ToString();
+                string sessionType = dataTable.Rows[0]["type"].ToString();
                 int sessionStatus = Convert.ToInt32(dataTable.Rows[0]["status"]);
                 if (sessionStatus == 0) {
 
+                    Session["userName"] = sessionUserName;
+                    Session["password"] = sessionPassword;
+                    Session["message"] = 1;
+                    Response.Redirect("superVisior/dashboard/dashboard.aspx");
                 }
                 if(sessionStatus == 1) {
+
+                    Session["userName"] = sessionUserName;
+                    Session["password"] = sessionPassword;
+                    Session["message"] = 1;
                     Response.Redirect("superVisior/dashboard/dashboard.aspx");
-                    
+                } else {
+
+                    Session["userName"] = sessionUserName;
+                    Session["password"] = sessionPassword;
+                    Session["message"] = 1;
+                    Response.Redirect("admin/dashboard/dashboard.aspx");                    
                 }
+            } else {
 
-            }
-            Response.Redirect("admin/dashboard/dashboard.aspx");
-        }
-
-        public string baseUrl {
-
-            get {
-
-                return furnitureHubObject.baseUrl();
+                Session["message"] = 0;
+                Response.Redirect("Default.aspx");
             }
         }
     }

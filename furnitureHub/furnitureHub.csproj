@@ -1170,7 +1170,7 @@
     <Content Include="assets\plugins\waypoints\jquery.waypoints.min.js" />
     <Content Include="Default.aspx" />
     <Content Include="signup.aspx" />
-    <Content Include="superVisior\Dashboard\dashboard.aspx" />
+    <Content Include="supervisior\Dashboard\dashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1225,11 +1225,11 @@
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="superVisior\Dashboard\dashboard.aspx.cs">
+    <Compile Include="supervisior\Dashboard\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="superVisior\Dashboard\dashboard.aspx.designer.cs">
+    <Compile Include="supervisior\Dashboard\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
