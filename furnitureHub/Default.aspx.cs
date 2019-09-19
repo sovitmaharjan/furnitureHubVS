@@ -74,7 +74,7 @@ namespace furnitureHub {
                     }
                     if(sessionType == 1){
 
-                        Response.Redirect("supervisior/dashboard/dashboard.aspx");
+                        Response.Redirect("supervisor/dashboard/dashboard.aspx");
                     }
                 } else {
 
