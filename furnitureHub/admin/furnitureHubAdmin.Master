@@ -94,7 +94,7 @@
 
                 <!-- LOGO -->
                 <div class="topbar-left">
-                    <a href="index.html" class="logo"><span>Furniture <span>Hub</span></span><i class="mdi mdi-cube"></i></a>
+                    <a href="<%=this.baseUrl%>/admin/dashboard/dashboard.aspx" class="logo"><span>Furniture <span>Hub</span></span><i class="mdi mdi-cube"></i></a>
                     <!-- Image logo -->
                     <!--<a href="index.html" class="logo">-->
                         <!--<span>-->
@@ -167,10 +167,15 @@
                                     <li>
                                         <h5>Hi, John</h5>
                                     </li>
-                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i> Profile</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i> Settings</a></li>
-                                    <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
-                                    <li><a href="<%=this.baseUrl%>"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-5"></i>Profile </a></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-settings m-r-5"></i>Settings </a></li>
+                                    <li><a href="javascript:void(0)"><i class="ti-lock m-r-5"></i>Lock screen </a></li>
+                                    <li>
+                                        <a runat="server" onserverclick="logout">
+                                            <i class="ti-power-off m-r-5"></i> 
+                                            Logout
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
 
