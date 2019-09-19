@@ -13,6 +13,15 @@ namespace furnitureHub.supervisor {
     public partial class furnitureHubSupervisor {
         
         /// <summary>
+        /// logoutAspx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor logoutAspx;
+        
+        /// <summary>
         /// content control.
         /// </summary>
         /// <remarks>

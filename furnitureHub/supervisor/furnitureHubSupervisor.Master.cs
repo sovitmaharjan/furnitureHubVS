@@ -21,5 +21,11 @@ namespace furnitureHub.supervisor {
         protected void Page_Load(object sender, EventArgs e) {
 
         }
+
+        public void logout() {
+
+            Session.Clear();
+            Response.Redirect("~/Default.aspx");
+        }
     }
 }
