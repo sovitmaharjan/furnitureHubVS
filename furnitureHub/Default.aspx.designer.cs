@@ -10,7 +10,7 @@
 namespace furnitureHub {
     
     
-    public partial class Default {
+    public partial class _default {
         
         /// <summary>
         /// message control.

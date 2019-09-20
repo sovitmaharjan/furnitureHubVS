@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="furnitureHub.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="furnitureHub._default" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -131,7 +131,7 @@
                 </div>
             </div>
           </section>
-          <!-- END HOME -->
+          <!-- END HOMe -->
 
         <script>
             var resizefunc = [];

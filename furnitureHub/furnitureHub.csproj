@@ -163,6 +163,7 @@
     <Content Include="assets\plugins\tinymce\skins\lightgray\fonts\tinymce.woff" />
     <Content Include="assets\plugins\tinymce\themes\inlite\src\test\.eslintrc" />
     <Content Include="admin\furnitureHubAdmin.Master" />
+    <Content Include="default.aspx" />
     <Content Include="supervisor\Dashboard\Dashboard.aspx" />
     <Content Include="supervisor\furnitureHubSupervisor.Master" />
     <None Include="Web.Debug.config">
@@ -1170,7 +1171,6 @@
     <Content Include="assets\plugins\tooltipster\tooltipster.bundle.min.js" />
     <Content Include="assets\plugins\tooltipster\tooltipster.core.min.js" />
     <Content Include="assets\plugins\waypoints\jquery.waypoints.min.js" />
-    <Content Include="Default.aspx" />
     <Content Include="signup.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1210,12 +1210,12 @@
     <Compile Include="admin\orderForm\orderFormList.aspx.designer.cs">
       <DependentUpon>orderFormList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="furnitureHub.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
