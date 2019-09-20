@@ -159,13 +159,13 @@ namespace furnitureHub {
             int itemPrice,
             int orderId
         ) {
-            string query = "exec saveOrder"
-                + itemId + ", "
-                + itemName + ", "
-                + itemDate + ", "
-                + itemPrice + ", "
-                + orderId;
-            return queryFunction(query);
+            //string query = "exec saveOrder"
+            //    + itemId + ", "
+            //    + itemName + ", "
+            //    + itemDate + ", "
+            //    + itemPrice + ", "
+            //    + orderId;
+            return queryFunction("query");
         }
     }
 }

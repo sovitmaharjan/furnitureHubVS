@@ -3,20 +3,19 @@
     <!-- Start content -->
     <div class="content">
         <div class="container">
-        
             <div class="row">
                 <div class="col-xs-12">
                     <div class="page-title-box">
                         <h4 class="page-title">Dashboard 2 </h4>
                         <ol class="breadcrumb p-0 m-0">
                             <li>
-                                <a href="#">Zircos</a>
+                                <a href="#">Zircos </a>
                             </li>
                             <li>
                                 <a href="#">Dashboard </a>
                             </li>
                             <li class="active">
-                                Dashboard 2
+                                Dashboard 2 
                             </li>
                         </ol>
                         <div class="clearfix"></div>
@@ -25,9 +24,7 @@
             </div>
             <!-- end row -->
 
-
             <div class="row">
-
                 <div class="col-lg-3 col-md-6">
                     <div class="card-box widget-box-two widget-two-info">
                         <i class="mdi mdi-chart-areaspline widget-two-icon"></i>
@@ -75,7 +72,6 @@
             </div>
             <!-- end row -->
 
-
             <div class="row">
                 <div class="col-lg-6">
                     <div class="card-box">
@@ -108,7 +104,6 @@
 
             </div>
             <!-- end row -->
-
 
             <div class="row">
 
@@ -187,7 +182,6 @@
                         </div>
                     </div>
                     <!-- end panel -->
-
                 </div>
                 <!-- end col -->
 

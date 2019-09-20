@@ -51,7 +51,7 @@ namespace furnitureHub.supervisor {
             }
         }
 
-        public void logout() {
+        public void logout(object sender, EventArgs e) {
 
             Session.Clear();
             Response.Redirect("~/Default.aspx");
