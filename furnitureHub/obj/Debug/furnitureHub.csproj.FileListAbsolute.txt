@@ -14,3 +14,4 @@ C:\Users\avighnaPC1\Documents\Visual Studio 2013\Projects\furnitureHub\furniture
 C:\Users\avighnaPC1\Documents\Visual Studio 2013\Projects\furnitureHub\furnitureHub\bin\furnitureHub.pdb
 C:\Users\avighnaPC1\Documents\Visual Studio 2013\Projects\furnitureHub\furnitureHub\obj\Debug\furnitureHub.dll
 C:\Users\avighnaPC1\Documents\Visual Studio 2013\Projects\furnitureHub\furnitureHub\obj\Debug\furnitureHub.pdb
+C:\Users\avighnaPC1\Documents\Visual Studio 2013\Projects\furnitureHub\furnitureHub\obj\Debug\furnitureHub.csprojResolveAssemblyReference.cache

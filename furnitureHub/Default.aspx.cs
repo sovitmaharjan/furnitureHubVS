@@ -41,13 +41,11 @@ namespace furnitureHub {
 
                     message.Text = "<div class='alert alert-danger' id='message' role='alert'><strong>Invalid </strong> Data</div>";
                     timeScript.Text = fadeout;
-                }
-                if(Session["message"].ToString() == "1") {
+                }else if(Session["message"].ToString() == "1") {
 
                     message.Text = "<div class='alert alert-danger' id='message' role='alert'>This <strong>User </strong>is temporarily disabled. </div>";
                     timeScript.Text = fadeout;
-                }
-                if(Session["message"].ToString() == "3") {
+                }else if(Session["message"].ToString() == "3") {
 
                     message.Text = "<div class='alert alert-danger' id='message' role='alert'>Access <strong>Denied </strong></div>";
                     timeScript.Text = fadeout;
@@ -71,8 +69,7 @@ namespace furnitureHub {
                             if(sessionType == 0) {
 
                                 Response.Redirect("admin/dashboard/dashboard.aspx");
-                            }
-                            if(sessionType == 1) {
+                            }else if(sessionType == 1) {
 
                                 Response.Redirect("supervisor/dashboard/dashboard.aspx");
                             }
@@ -111,8 +108,7 @@ namespace furnitureHub {
                     if(sessionType == 0) {
 
                         Response.Redirect("admin/dashboard/dashboard.aspx");
-                    }
-                    if(sessionType == 1) {
+                    }else if(sessionType == 1) {
 
                         Response.Redirect("supervisor/dashboard/dashboard.aspx");
                     }
