@@ -131,7 +131,7 @@
                 </div>
             </div>
           </section>
-          <!-- END HOMe -->
+          <!-- END HOME -->
 
         <script>
             var resizefunc = [];
