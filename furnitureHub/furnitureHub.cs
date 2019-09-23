@@ -120,34 +120,7 @@ namespace furnitureHub {
             string factoryForm,
             string handledBy
         ) {
-            string query = "exec saveOrder "
-                + orderId + ", "
-                + orderDate + ", "
-                + customerId + ", "
-
-                + customerName + ", "
-                + customerNumber + ", "
-                + customerAddress + ", "
-                + type + ", "
-                + fhMember + ", "
-
-                + paymentId + ", "
-                + totalAmount + ", "
-                + advance + ", "
-                + collectedBy + ", "
-                + cash + ", "
-                + cheque + ", "
-                + bankDeposite + ", "
-                + creditCard + ", "
-                + ime + ", "
-                + online + ", "
-                + other + ", "
-                + otherNotes + ", "
-                + exchangeDetails + ", "
-
-                + productionForm + ", "
-                + factoryForm + ", "
-                + handledBy;
+            string query = "exec saveOrder '" + orderId + "', '" + orderDate + "', '" + customerId + "', '" + customerName + "', '" + customerNumber + "', '" + customerAddress + "', '" + type + "', '" + fhMember + "', '" + paymentId + "', '" + totalAmount + "', '" + advance + "', '" + collectedBy + "', '" + cash + "', '"+ cheque + "', '" + bankDeposite + "', '" + creditCard + "', '" + ime + "', '" + online + "', '" + other + "', '" + otherNotes + "', '" + exchangeDetails + "', '" + productionForm + "', '" + factoryForm + "', '" + handledBy + "'";
             return queryFunction(query);
         }
 
@@ -155,17 +128,12 @@ namespace furnitureHub {
 
             int itemId,
             string itemName,
-            string itemDate,
+            DateTime itemDate,
             int itemPrice,
             int orderId
         ) {
-            //string query = "exec saveOrder"
-            //    + itemId + ", "
-            //    + itemName + ", "
-            //    + itemDate + ", "
-            //    + itemPrice + ", "
-            //    + orderId;
-            return queryFunction("query");
+            string query = "exec saveOrder '" + itemId + "', '" + itemName + "', '" + itemDate + "', '" + itemPrice + "', '" + orderId + "'";
+            return queryFunction(query);
         }
     }
 }

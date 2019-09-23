@@ -69,29 +69,6 @@ namespace furnitureHub.admin.orderFrom {
             }
             string fhMember = fhMemberAspx.Value;
 
-            string itemIds = itemIdsAspx.Value;
-            string[] itemId = itemIds.Split('|');
-            string itemNames = itemNamesAspx.Value;
-            string[] itemName = itemNames.Split('|');
-            string dates = datesAspx.Value;
-            string[] date = dates.Split('|');
-            string prices = pricesAspx.Value;
-            string[] price = prices.Split('|');
-            int count = itemId.Length;
-            int i;
-            int j;
-            for (i = 1; i <= count; i++) {
-
-                j = i - 1;
-                furnitureHubObject.saveOrderDetail(
-                    Convert.ToInt32(itemId[j]),
-                    itemName[j],
-                    date[j],
-                    Convert.ToInt32(price[j]),
-                    orderId
-                );
-            }
-
             int paymentId = Convert.ToInt32(paymentIdAspx.Value);
             int totalAmount = Convert.ToInt32(totalAmountAspx.Value);
             int advance = Convert.ToInt32(advanceAspx.Value);
@@ -202,6 +179,38 @@ namespace furnitureHub.admin.orderFrom {
                 factoryForm,
                 handledBy
             );
+
+            string itemIds = itemIdsAspx.Value;
+            string[] itemId = itemIds.Split('|');
+            string itemNames = itemNamesAspx.Value;
+            string[] itemName = itemNames.Split('|');
+            string dates = datesAspx.Value;
+            string[] date = dates.Split('|');
+            string prices = pricesAspx.Value;
+            string[] price = prices.Split('|');
+            int count = itemId.Length;
+            int i;
+            int j;
+            int theItemId;
+            for(i = 1; i <= count; i++) {
+
+                j = i - 1;
+                if(string.IsNullOrEmpty(itemId[j])) {
+
+                    theItemId = 0;
+                } else {
+
+                    theItemId = Convert.ToInt32(itemId[j]);
+                }
+                furnitureHubObject.saveOrderDetail(
+                    theItemId,
+                    itemName[j],
+                    Convert.ToDateTime(date[j]),
+                    Convert.ToInt32(price[j]),
+                    orderId
+                );
+            }
+
         }
     }
 }
