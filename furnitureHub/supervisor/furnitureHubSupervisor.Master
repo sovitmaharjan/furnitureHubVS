@@ -217,24 +217,11 @@
                             </li>
                             
                             <li>
-                                <a href="<%=this.baseUrl%>/admin/orderForm/orderFormList.aspx" class="waves-effect"><i class="mdi mdi-clipboard-text"></i><span>Order Form </span></a>
-                            </li>
-
-                            <li>
-                                <a href="<%=this.baseUrl%>/admin/employee/employeeList.aspx" class="waves-effect"><i class="mdi mdi-account-multiple"></i><span>Employee </span> </a>
+                                <a href="<%=this.baseUrl%>/admin/order/orderList.aspx" class="waves-effect"><i class="mdi mdi-clipboard-text"></i><span>Order Form </span></a>
                             </li>
 
                             <li>
                                 <a href="<%=this.baseUrl%>/admin/customer/customerList.aspx" class="waves-effect"><i class=" mdi mdi-account-network"></i><span>Customer </span> </a>
-                            </li>
-
-                            <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-map"></i> <span> Example </span> <span class="menu-arrow"></span></a>
-                                <ul class="list-unstyled">
-                                    <li><a href="#">Example 1 </a></li>
-                                    <li><a href="#">Example 2 </a></li>
-                                    <li><a href="#">Example 3 </a></li>
-                                </ul>
                             </li>
                         </ul>
                     </div>

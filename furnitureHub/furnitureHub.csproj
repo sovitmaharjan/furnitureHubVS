@@ -59,8 +59,8 @@
   <ItemGroup>
     <Content Include="admin\customer\customerList.aspx" />
     <Content Include="admin\dashboard\dashboard.aspx" />
-    <Content Include="admin\orderForm\orderForm.aspx" />
-    <Content Include="admin\orderForm\orderFormList.aspx" />
+    <Content Include="admin\order\orderForm.aspx" />
+    <Content Include="admin\order\orderList.aspx" />
     <Content Include="assets\css\bootstrap.min.css.map" />
     <Content Include="assets\fonts\fontawesome-webfont.eot" />
     <Content Include="assets\fonts\fontawesome-webfont.ttf" />
@@ -1172,6 +1172,7 @@
     <Content Include="assets\plugins\tooltipster\tooltipster.core.min.js" />
     <Content Include="assets\plugins\waypoints\jquery.waypoints.min.js" />
     <Content Include="signup.aspx" />
+    <Content Include="supervisor\order\orderList.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1198,19 +1199,19 @@
     <Compile Include="admin\furnitureHubAdmin.Master.designer.cs">
       <DependentUpon>furnitureHubAdmin.Master</DependentUpon>
     </Compile>
-    <Compile Include="admin\orderForm\orderForm.aspx.cs">
+    <Compile Include="admin\order\orderForm.aspx.cs">
       <DependentUpon>orderForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\orderForm\orderForm.aspx.designer.cs">
+    <Compile Include="admin\order\orderForm.aspx.designer.cs">
       <DependentUpon>orderForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\orderForm\orderFormList.aspx.cs">
-      <DependentUpon>orderFormList.aspx</DependentUpon>
+    <Compile Include="admin\order\orderList.aspx.cs">
+      <DependentUpon>orderList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\orderForm\orderFormList.aspx.designer.cs">
-      <DependentUpon>orderFormList.aspx</DependentUpon>
+    <Compile Include="admin\order\orderList.aspx.designer.cs">
+      <DependentUpon>orderList.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -1241,6 +1242,13 @@
     </Compile>
     <Compile Include="supervisor\furnitureHubSupervisor.Master.designer.cs">
       <DependentUpon>furnitureHubSupervisor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor\order\orderList.aspx.cs">
+      <DependentUpon>orderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisor\order\orderList.aspx.designer.cs">
+      <DependentUpon>orderList.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
