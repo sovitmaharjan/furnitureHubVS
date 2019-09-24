@@ -8,7 +8,7 @@ using System.Data;
 using System.Web.Services;
 
 namespace furnitureHub.admin.orderFrom {
-    public partial class orderFormList : System.Web.UI.Page {
+    public partial class orderList : System.Web.UI.Page {
 
         furnitureHub furnitureHubObject = new furnitureHub();
         static furnitureHub staticFurnitureHubObject = new furnitureHub();
@@ -23,7 +23,7 @@ namespace furnitureHub.admin.orderFrom {
 
         protected void Page_Load(object sender, EventArgs e) {
 
-            DataTable dataTable = furnitureHubObject.orderFormList();
+            DataTable dataTable = furnitureHubObject.orderList();
             string tableBodyRow = "";
             foreach (DataRow value in dataTable.Rows)
             {

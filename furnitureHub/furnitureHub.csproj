@@ -1172,7 +1172,9 @@
     <Content Include="assets\plugins\tooltipster\tooltipster.core.min.js" />
     <Content Include="assets\plugins\waypoints\jquery.waypoints.min.js" />
     <Content Include="signup.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\customer\customerList.aspx.cs">

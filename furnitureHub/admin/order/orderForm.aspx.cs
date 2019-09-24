@@ -147,6 +147,7 @@ namespace furnitureHub.admin.orderFrom {
 
                 factoryForm = "no";
             }
+            string asd = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             string handledBy = handledByAspx.Value;
 
             furnitureHubObject.saveOrder(
@@ -202,15 +203,18 @@ namespace furnitureHub.admin.orderFrom {
 
                     theItemId = Convert.ToInt32(itemId[j]);
                 }
+                DateTime theDateTemp = Convert.ToDateTime(date[j]);
+                string theDate = theDateTemp.ToString("yyyy-MM-dd HH:mm:ss");
+
                 furnitureHubObject.saveOrderDetail(
                     theItemId,
                     itemName[j],
-                    Convert.ToDateTime(date[j]),
+                    theDate,
                     Convert.ToInt32(price[j]),
                     orderId
                 );
             }
-
+            Response.Redirect("~/admin/order/orderList.aspx");
         }
     }
 }

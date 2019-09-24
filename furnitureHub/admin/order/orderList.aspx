@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/furnitureHubAdmin.Master" AutoEventWireup="true" CodeBehind="orderFormList.aspx.cs" Inherits="furnitureHub.admin.orderFrom.orderFormList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/furnitureHubAdmin.Master" AutoEventWireup="true" CodeBehind="orderList.aspx.cs" Inherits="furnitureHub.admin.orderFrom.orderList" %>
 <asp:Content id="Content1" ContentPlaceHolderID="content" runat="server">
     <!-- Start content -->
     <div class="content">

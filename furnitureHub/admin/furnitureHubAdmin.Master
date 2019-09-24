@@ -222,7 +222,7 @@
                             </li>
                             
                             <li>
-                                <a href="<%=this.baseUrl%>/admin/orderForm/orderFormList.aspx" class="waves-effect"><i class="mdi mdi-clipboard-text"></i><span>Order Form </span></a>
+                                <a href="<%=this.baseUrl%>/admin/order/orderList.aspx" class="waves-effect"><i class="mdi mdi-clipboard-text"></i><span>Order Form </span></a>
                             </li>
 
                             <li>

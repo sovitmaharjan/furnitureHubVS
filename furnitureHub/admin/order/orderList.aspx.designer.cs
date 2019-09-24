@@ -10,7 +10,7 @@
 namespace furnitureHub.admin.orderFrom {
     
     
-    public partial class orderFormList {
+    public partial class orderList {
         
         /// <summary>
         /// tableBody control.

@@ -85,7 +85,7 @@ namespace furnitureHub {
 
         //--------------------------------------------orderForm--------------------------------------------
 
-        public DataTable orderFormList() {
+        public DataTable orderList() {
 
             string query = "select * from viewOrder";
             return queryFunction(query);
@@ -120,7 +120,31 @@ namespace furnitureHub {
             string factoryForm,
             string handledBy
         ) {
-            string query = "exec saveOrder '" + orderId + "', '" + orderDate + "', '" + customerId + "', '" + customerName + "', '" + customerNumber + "', '" + customerAddress + "', '" + type + "', '" + fhMember + "', '" + paymentId + "', '" + totalAmount + "', '" + advance + "', '" + collectedBy + "', '" + cash + "', '"+ cheque + "', '" + bankDeposite + "', '" + creditCard + "', '" + ime + "', '" + online + "', '" + other + "', '" + otherNotes + "', '" + exchangeDetails + "', '" + productionForm + "', '" + factoryForm + "', '" + handledBy + "'";
+            string query = "exec saveOrder '"
+                + orderId + "', '"
+                + orderDate + "', '"
+                + customerId + "', '"
+                + customerName + "', '"
+                + customerNumber + "', '"
+                + customerAddress + "', '"
+                + type + "', '"
+                + fhMember + "', '"
+                + paymentId + "', '"
+                + totalAmount + "', '"
+                + advance + "', '"
+                + collectedBy + "', '"
+                + cash + "', '"
+                + cheque + "', '"
+                + bankDeposite + "', '"
+                + creditCard + "', '"
+                + ime + "', '"
+                + online + "', '"
+                + other + "', '"
+                + otherNotes + "', '"
+                + exchangeDetails + "', '"
+                + productionForm + "', '"
+                + factoryForm + "', '"
+                + handledBy + "'";
             return queryFunction(query);
         }
 
@@ -128,11 +152,16 @@ namespace furnitureHub {
 
             int itemId,
             string itemName,
-            DateTime itemDate,
+            string itemDate,
             int itemPrice,
             int orderId
         ) {
-            string query = "exec saveOrder '" + itemId + "', '" + itemName + "', '" + itemDate + "', '" + itemPrice + "', '" + orderId + "'";
+            string query = "exec saveOrderDetail '"
+                + itemId + "', '"
+                + itemName + "', '"
+                + itemDate + "', '"
+                + itemPrice + "', '"
+                + orderId + "'";
             return queryFunction(query);
         }
     }
