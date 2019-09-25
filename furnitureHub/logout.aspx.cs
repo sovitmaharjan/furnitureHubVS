@@ -7,8 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 
 namespace furnitureHub {
-    public partial class _default : System.Web.UI.Page {
-
+    public partial class logout : System.Web.UI.Page {
         furnitureHub furnitureHubObject = new furnitureHub();
 
         public string baseUrl {

@@ -213,15 +213,15 @@
                             <li class="menu-title">Navigation</li>
                             
                             <li>
-                                <a href="<%=this.baseUrl%>/admin/dashboard/dashboard.aspx" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span>Dashboard </span></a>
+                                <a href="<%=this.baseUrl%>/supervisor/dashboard/dashboard.aspx" class="waves-effect"><i class="mdi mdi-view-dashboard"></i><span>Dashboard </span></a>
                             </li>
                             
                             <li>
-                                <a href="<%=this.baseUrl%>/admin/order/orderList.aspx" class="waves-effect"><i class="mdi mdi-clipboard-text"></i><span>Order Form </span></a>
+                                <a href="<%=this.baseUrl%>/supervisor/order/orderList.aspx" class="waves-effect"><i class="mdi mdi-clipboard-text"></i><span>Order Form </span></a>
                             </li>
 
                             <li>
-                                <a href="<%=this.baseUrl%>/admin/customer/customerList.aspx" class="waves-effect"><i class=" mdi mdi-account-network"></i><span>Customer </span> </a>
+                                <a href="<%=this.baseUrl%>/supervisor/customer/customerList.aspx" class="waves-effect"><i class=" mdi mdi-account-network"></i><span>Customer </span> </a>
                             </li>
                         </ul>
                     </div>
@@ -447,6 +447,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#datatable').dataTable();
+                $('.datatable').dataTable();
                 $('#datatable-keytable').DataTable({ keys: true });
                 $('#datatable-responsive').DataTable();
                 $('#datatable-colvid').DataTable({

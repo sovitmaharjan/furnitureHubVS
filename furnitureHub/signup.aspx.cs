@@ -33,6 +33,7 @@ namespace furnitureHub {
             string password = passwordAspx.Value;
 
             furnitureHubObject.register(id, userName, password);
+            Session.Clear();
             Response.Redirect("Default.aspx");
         }
     }

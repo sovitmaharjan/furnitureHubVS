@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/supervisor/furnitureHubSupervisor.Master" AutoEventWireup="true" CodeBehind="orderList.aspx.cs" Inherits="furnitureHub.supervisor.order.orderList" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/supervisor/furnitureHubSupervisor.Master" AutoEventWireup="true" CodeBehind="orderItemList.aspx.cs" Inherits="furnitureHub.supervisor.order.orderItemList" %>
 <asp:Content id="Content1" ContentPlaceHolderID="content" runat="server">
     <!-- Start content -->
     <div class="content">
@@ -26,10 +26,10 @@
                             <table id="datatable" class="table table-striped table-colored table-info">
                                 <thead>
                                     <tr>
-                                        <th>FH Order # </th>
-                                        <th>Order Date </th>
-                                        <th>Customer </th>
-                                        <th>Order Items </th>
+                                        <th>S. No. </th>
+                                        <th>Item </th>
+                                        <th>Delievery Date </th>
+                                        <th> </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,5 +45,5 @@
     </div> <!-- content -->
 </asp:Content>
 <asp:Content id="Content2" ContentPlaceHolderID="footer" runat="server">
-
+    
 </asp:Content>

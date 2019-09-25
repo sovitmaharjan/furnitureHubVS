@@ -206,7 +206,7 @@ namespace furnitureHub.admin.orderFrom {
                 DateTime theDateTemp = Convert.ToDateTime(date[j]);
                 string theDate = theDateTemp.ToString("yyyy-MM-dd HH:mm:ss");
 
-                furnitureHubObject.saveOrderDetail(
+                furnitureHubObject.saveOrderItem(
                     theItemId,
                     itemName[j],
                     theDate,

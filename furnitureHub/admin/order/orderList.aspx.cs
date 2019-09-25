@@ -43,8 +43,7 @@ namespace furnitureHub.admin.orderFrom {
         }
 
         [WebMethod]
-        public static string[] getItemById(int orderId)
-        {
+        public static string[] getItemById(int orderId) {
 
             DataTable dataTable = staticFurnitureHubObject.itemList(orderId);
             int count = dataTable.Rows.Count;

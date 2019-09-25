@@ -46,10 +46,12 @@ namespace furnitureHub {
         public DataTable register(int id, string userName, string password) {
 
             int status = 0;
+            int type = 1;
             string query = "exec register '"
                 + id + "', '"
                 + userName + "', '"
                 + password + "', '"
+                + type + "', '"
                 + status + "'";
             return queryFunction(query);
         }
@@ -72,7 +74,7 @@ namespace furnitureHub {
 
         public DataTable itemList(int orderId) {
 
-            string query = "select * from tblOrderDetail where orderId =" + orderId;
+            string query = "select * from tblOrderItem where orderId =" + orderId;
             return queryFunction(query);
         }
 
@@ -148,7 +150,7 @@ namespace furnitureHub {
             return queryFunction(query);
         }
 
-        public DataTable saveOrderDetail(
+        public DataTable saveOrderItem(
 
             int itemId,
             string itemName,
@@ -156,7 +158,7 @@ namespace furnitureHub {
             int itemPrice,
             int orderId
         ) {
-            string query = "exec saveOrderDetail '"
+            string query = "exec saveOrderItem '"
                 + itemId + "', '"
                 + itemName + "', '"
                 + itemDate + "', '"

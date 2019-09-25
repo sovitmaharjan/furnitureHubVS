@@ -164,6 +164,7 @@
     <Content Include="assets\plugins\tinymce\themes\inlite\src\test\.eslintrc" />
     <Content Include="admin\furnitureHubAdmin.Master" />
     <Content Include="default.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="supervisor\Dashboard\Dashboard.aspx" />
     <Content Include="supervisor\furnitureHubSupervisor.Master" />
     <None Include="Web.Debug.config">
@@ -1172,6 +1173,8 @@
     <Content Include="assets\plugins\tooltipster\tooltipster.core.min.js" />
     <Content Include="assets\plugins\waypoints\jquery.waypoints.min.js" />
     <Content Include="signup.aspx" />
+    <Content Include="supervisor\order\orderItemDesign.aspx" />
+    <Content Include="supervisor\order\orderItemList.aspx" />
     <Content Include="supervisor\order\orderList.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1221,6 +1224,13 @@
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
     <Compile Include="furnitureHub.cs" />
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signup.aspx.cs">
       <DependentUpon>signup.aspx</DependentUpon>
@@ -1242,6 +1252,20 @@
     </Compile>
     <Compile Include="supervisor\furnitureHubSupervisor.Master.designer.cs">
       <DependentUpon>furnitureHubSupervisor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor\order\orderItemDesign.aspx.cs">
+      <DependentUpon>orderItemDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisor\order\orderItemDesign.aspx.designer.cs">
+      <DependentUpon>orderItemDesign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor\order\orderItemList.aspx.cs">
+      <DependentUpon>orderItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisor\order\orderItemList.aspx.designer.cs">
+      <DependentUpon>orderItemList.aspx</DependentUpon>
     </Compile>
     <Compile Include="supervisor\order\orderList.aspx.cs">
       <DependentUpon>orderList.aspx</DependentUpon>

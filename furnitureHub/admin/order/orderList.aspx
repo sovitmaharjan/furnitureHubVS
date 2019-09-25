@@ -94,7 +94,7 @@
 
                     method: 'post',
                     data: '{orderId:' + orderId + '}',
-                    url: 'orderFormList.aspx/getItemById',
+                    url: 'orderList.aspx/getItemById',
                     contentType: "application/json; charset=utf-8",
                     dataType: 'json',
                     success: function(data) {
