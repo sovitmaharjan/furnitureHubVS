@@ -350,6 +350,28 @@
                     autoclose: true,
                     todayHighlight: true
                 });
+
+                $('.forAddition').on('keyup', function () {
+
+                    var count = $('#item tr').length - 1;
+                    //console.log(count);
+                    var itemprice;
+                    var price = 0;
+                    var totalPrice = "";
+                    for (var i = 1; i <= count; i++) {
+
+                        if ($('#itemPriceAspx' + i).val()) {
+
+                            itemprice = $('#itemPriceAspx' + i).val();
+                        } else {
+
+                            itemprice = 0;
+                        }
+                        price = parseInt(price) + parseInt(itemprice);
+                    }
+                    //console.log(price);
+                    $('#<%=totalAmountAspx.ClientID%>').val(price);
+                });
             });
             $(document).on('click', '.remove', function() {
 
@@ -410,6 +432,28 @@
             //Install input filters
             $(".onlyNumber").inputFilter(function(value) {
                 return /^\d*$/.test(value);
+            });
+
+            $('.forAddition').on('keyup', function () {
+
+                var count = $('#item tr').length - 1;
+                //console.log(count);
+                var itemprice;
+                var price = 0;
+                var totalPrice = "";
+                for (var i = 1; i <= count; i++) {
+
+                    if ($('#itemPriceAspx' + i).val()) {
+
+                        itemprice = $('#itemPriceAspx' + i).val();
+                    } else {
+
+                        itemprice = 0;
+                    }
+                    price = parseInt(price) + parseInt(itemprice);
+                }
+                //console.log(price);
+                $('#<%=totalAmountAspx.ClientID%>').val(price);
             });
         })
     
