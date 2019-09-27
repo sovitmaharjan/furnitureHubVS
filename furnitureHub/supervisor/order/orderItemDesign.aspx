@@ -38,6 +38,29 @@
                             </p>
                             <div class="row">
                                 <form class="form-horizontal" runat="server">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-xs-12">
+                                            <div class="p-20">
+                                                <label style="font-size: 20px" >
+                                                    <asp:literal id="itemNameAspx" runat="server"></asp:literal>
+                                                </label>
+                                                <div class="form-group clearfix">
+                                                    <div class="col-sm-12 padding-left-0 padding-right-0">
+                                                        <input type="file" name="files[]" id="filer_input1"
+                                                               multiple="multiple">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                    <div class="col-md-3 pull-right">  
+                                                    <asp:Label ID="lblErrorMsg" runat="server" Text=""></asp:Label>                            
+                                                    <asp:Image ID="Image1" class="blah"  runat="server" style="height: 150px; width: 150px ;border-style: ridge; border-width: 5px ;" src="http://avighnatechnology.com/images/dummyselect.jpg"/> 
+                                                <asp:FileUpload ID="FileUpload1" multiple="true"  onchange="readURL(this);"  runat="server" Height="22px" accept=".png,.jpg,.jpeg,.gif" /><br /> 
+                                   
+                                        </div>  
+
                                     <div class="table-responsive">
                                         <table id="" class="table table-bordered table-info table-colored">
                                             <thead>
@@ -47,37 +70,28 @@
                                             </thead>
                                             <tbody id="item">
                                                 <tr>
-                                                    <th style="width: 6%;">S. No. </th>
-                                                    <th style="width: 60%;">
-                                                        List of Items 
-                                                        <div hidden="hidden">
-                                                            <input type="text" id="itemIdsAspx" value="123" runat="server" />
-                                                            <input type="text" id="itemNamesAspx" value="234" runat="server" />
-                                                            <input type="text" id="datesAspx" value="345" runat="server" />
-                                                            <input type="text" id="pricesAspx" value="456" runat="server" />
-                                                        </div>
+                                                    <th style="width: 5%;">S. No. </th>
+                                                    <th style="width: 45%;">
+                                                        <%--<div hidden="hidden">
+                                                            <input type="text" id="" value="123" runat="server" />
+                                                            <input type="text" id="" value="234" runat="server" />
+                                                        </div>--%>
+                                                        Column 
                                                     </th>
-                                                    <th style="width: 15%;">
-                                                        Delivery Date 
+                                                    <th style="width: 45%;">
+                                                        Value 
                                                     </th>
-                                                    <th style="width: 15%;">
-                                                        Detail Price 
-                                                    </th>
-                                                    <th style="width: 4%;">
+                                                    <th style="width: 5%;">
                                                         <button type="button" id="addItem" class="btn btn-success btn-sm">+ </button>
                                                     </th>
                                                 </tr>
                                                 <tr id="itemRow1">
                                                     <td>1 </td>
                                                     <td>
-                                                        <input type="hidden" id="itemIdAspx1" />
-                                                        <input type="text" id="itemNameAspx1" autocomplete="off" required="required" />
+                                                        <input type="text" id="columnAspx1" autocomplete="off" required="required" />
                                                     </td>
                                                     <td>
-                                                        <input type="text" id="itemDateAspx1" autocomplete="off" class="datePickerForAll" required="required" />
-                                                    </td>
-                                                    <td>
-                                                        <input type="text" class="onlyNumber forAddition" id="itemPriceAspx1" autocomplete="off" placeholder="Rs. " required="required" />
+                                                        <input type="text" id="valueAspx1" autocomplete="off" required="required" />
                                                     </td>
                                                     <th>
                                                         <button type="button" name="remove" data-row="itemRow1" class="btn btn-danger btn-sm remove">- </button>
@@ -90,6 +104,8 @@
                                     <div class="form-group row">
                                         <div class="col-sm-12">
                                             <div class="button-list" id="hover">
+                                                <asp:Button ID="btnsave" runat="server" Text="save" OnClick="btnsave_Click" />
+
                                                 <a class="btn btn-success btn-bordered waves-effect w-md waves-light col-md-1" runat="server" >Save </a>
                                                 <a class="btn btn-danger btn-bordered waves-effect w-md waves-light col-md-1" href="orderFormList.aspx" runat="server">Cancel </a>
                                             </div>
@@ -104,7 +120,24 @@
             <!-- end row -->
         </div> <!-- container -->
     </div> <!-- content -->
+    <script type="text/javascript">
 
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.blah')
+                    .attr('src', e.target.result)
+                    .width(150)
+                    .height(150);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+      
+      
+</script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">
@@ -124,18 +157,11 @@
                 console.log(count);
                 var html_code = "<tr id='itemRow" + count + "'>";
                 html_code += "<td>" + count + " </td>";
-                html_code += "<td><input type='hidden' id='itemIdAspx" + count + "' /><input type='text' id='itemNameAspx" + count + "' autocomplete='off' /> </td>";
-                html_code += "<td><input type='text' id='itemDateAspx" + count + "' class='datePickerForAll' autocomplete='off' /> </td>";
-                html_code += "<td><input type='text' class='onlyNumber forAddition' id='itemPriceAspx" + count + "' placeholder='Rs. ' autocomplete='off' /> </td>";
+                html_code += "<td><input type='text' id='columnAspx" + count + "' autocomplete='off' /> </td>";
+                html_code += "<td><input type='text' id='valueAspx" + count + "' autocomplete='off' /> </td>";
                 html_code += "<td><button type='button' name='remove' data-row='itemRow" + count + "' class='btn btn-danger btn-sm remove'>- </button> </td>";
                 html_code += "</tr>";
                 $('#item').append(html_code);
-                $('.datePickerForAll').datepicker({
-                    format: "yyyy-mm-dd",
-                    autoclose: true,
-                    todayHighlight: true
-                });
-
             });
             $(document).on('click', '.remove', function () {
 
@@ -143,7 +169,7 @@
                 $('#' + delete_row).remove();
             });
 
-            $('#hover').hover(function () {
+            <%--$('#hover').hover(function () {
 
                 $('#<%=itemIdsAspx.ClientID%>').val('');
                 $('#<%=itemNamesAspx.ClientID%>').val('');
@@ -176,7 +202,7 @@
                 $('#<%=itemNamesAspx.ClientID%>').val(itemName);
                 $('#<%=datesAspx.ClientID%>').val(itemDate);
                 $('#<%=pricesAspx.ClientID%>').val(itemPrice);
-            });
+            });--%>
 
             //Restricts input for each element in the set of matched elements to the given inputFilter
             (function ($) {

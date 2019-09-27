@@ -57,8 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\changePassword\changePassword.aspx" />
     <Content Include="admin\customer\customerList.aspx" />
     <Content Include="admin\dashboard\dashboard.aspx" />
+    <Content Include="admin\employee\employee.aspx" />
+    <Content Include="admin\employee\employeeList.aspx" />
     <Content Include="admin\order\orderForm.aspx" />
     <Content Include="admin\order\orderList.aspx" />
     <Content Include="assets\css\bootstrap.min.css.map" />
@@ -1181,6 +1184,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\changePassword\changePassword.aspx.cs">
+      <DependentUpon>changePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\changePassword\changePassword.aspx.designer.cs">
+      <DependentUpon>changePassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\customer\customerList.aspx.cs">
       <DependentUpon>customerList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1194,6 +1204,20 @@
     </Compile>
     <Compile Include="admin\dashboard\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\employee\employee.aspx.cs">
+      <DependentUpon>employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\employee\employee.aspx.designer.cs">
+      <DependentUpon>employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\employee\employeeList.aspx.cs">
+      <DependentUpon>employeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\employee\employeeList.aspx.designer.cs">
+      <DependentUpon>employeeList.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\furnitureHubAdmin.Master.cs">
       <DependentUpon>furnitureHubAdmin.Master</DependentUpon>
@@ -1276,7 +1300,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="admin\employee\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

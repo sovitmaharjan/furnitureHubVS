@@ -7,54 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace furnitureHub.supervisor.order {
+namespace furnitureHub.admin.changePassword {
     
     
-    public partial class orderItemDesign {
+    public partial class changePassword {
         
         /// <summary>
-        /// itemNameAspx control.
+        /// oldPasswordAspx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal itemNameAspx;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText oldPasswordAspx;
         
         /// <summary>
-        /// lblErrorMsg control.
+        /// newPasswordAspx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorMsg;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText newPasswordAspx;
         
         /// <summary>
-        /// Image1 control.
+        /// confirmPasswordAspx control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText confirmPasswordAspx;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// saveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-        
-        /// <summary>
-        /// btnsave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsave;
+        protected global::System.Web.UI.WebControls.Button saveButton;
     }
 }
