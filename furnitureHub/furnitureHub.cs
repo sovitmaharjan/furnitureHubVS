@@ -46,7 +46,7 @@ namespace furnitureHub {
         //--------------------------------------------registration--------------------------------------------
         public DataTable register(int id, string userName, string password) {
 
-            int status = 0;
+            int status = 1;
             int type = 1;
             string query = "exec register '"
                 + id + "', '"
@@ -87,76 +87,6 @@ namespace furnitureHub {
         }
 
         //--------------------------------------------orderForm--------------------------------------------
-        public void saveimage(int id, string column, string value, int orderItemId,string image, int status) {
-
-            string fileName = string.Empty;
-            string filePath = string.Empty;
-
-            connection.Open();//insert into tbl_Education_Image (Employee_Id,Image_Name) values(@Employee_Id,@Image_Name)
-            string sql = "insert into tblOrderItemDesign (id,column,value,orderItemId,image,status) value(@id,@column,@value,@orderItemId,@image,@status)";
-            SqlCommand cmd = new SqlCommand(sql, connection);
-            //  cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.Parameters.AddWithValue("@column", column);
-            //cmd.Parameters.AddWithValue("@Emp_Salutation", Emp_Salutation);
-            cmd.Parameters.AddWithValue("@value", value);
-            cmd.Parameters.AddWithValue("@orderItemId", orderItemId);
-            cmd.Parameters.AddWithValue("@status", status);
-            connection.Close();
-
-            if(image != string.Empty) {
-                SavePhoto(image, id.ToString());
-            }
-        }
-        
-             public void SavePhoto(string image, string id)
-        {
-            try
-            {
-                byte[] img = null;
-                string query;
-                string sql;
-                SqlCommand cmd;
-
-                //  SqlCommand cmd = new SqlCommand(sql, con);
-
-                connection.Open();
-                    if (image != string.Empty && image != "Not Required")
-                    {
-                        img = File.ReadAllBytes(image);
-                        //resizeImage(127, 133, textBox1.Text);
-                        query = "update tblOrderItemDesign set image=@image where id=@id";
-                        //cmd = new SqlCommand(sql, con);
-                        cmd = new SqlCommand(query, connection);
-                        cmd.Parameters.AddWithValue("@image", img);
-                    }
-                    else if (image == "Not Required")
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        query = "update tblOrderItemDesign set image=NULL where id=@id";
-                        cmd = new SqlCommand(query, connection);
-                    }
-
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
-                    cmd.Dispose();
-                    connection.Close();
-               
-                
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            finally
-            {
-                connection.Close();
-            }
-        }
         public DataTable orderList() {
 
             string query = "select * from viewOrder";

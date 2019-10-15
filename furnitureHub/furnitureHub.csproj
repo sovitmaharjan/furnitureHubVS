@@ -64,6 +64,7 @@
     <Content Include="admin\employee\employeeList.aspx" />
     <Content Include="admin\order\orderForm.aspx" />
     <Content Include="admin\order\orderList.aspx" />
+    <Content Include="admin\WebForm1.aspx" />
     <Content Include="assets\css\bootstrap.min.css.map" />
     <Content Include="assets\fonts\fontawesome-webfont.eot" />
     <Content Include="assets\fonts\fontawesome-webfont.ttf" />
@@ -168,8 +169,10 @@
     <Content Include="admin\furnitureHubAdmin.Master" />
     <Content Include="default.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="supervisor\changePassword\changePassword.aspx" />
     <Content Include="supervisor\Dashboard\Dashboard.aspx" />
     <Content Include="supervisor\furnitureHubSupervisor.Master" />
+    <None Include="Properties\PublishProfiles\--49.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1240,6 +1243,13 @@
     <Compile Include="admin\order\orderList.aspx.designer.cs">
       <DependentUpon>orderList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1262,6 +1272,13 @@
     </Compile>
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor\changePassword\changePassword.aspx.cs">
+      <DependentUpon>changePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisor\changePassword\changePassword.aspx.designer.cs">
+      <DependentUpon>changePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="supervisor\Dashboard\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

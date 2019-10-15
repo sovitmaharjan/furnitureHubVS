@@ -38,6 +38,8 @@
                             </p>
                             <div class="row">
                                 <form class="form-horizontal" runat="server">
+
+
                                     <div class="row">
                                         <div class="col-sm-12 col-xs-12">
                                             <div class="p-20">
@@ -54,13 +56,6 @@
                                         </div>
                                     </div>
                                     <!-- end row -->
-                                    <div class="col-md-3 pull-right">  
-                                                    <asp:Label ID="lblErrorMsg" runat="server" Text=""></asp:Label>                            
-                                                    <asp:Image ID="Image1" class="blah"  runat="server" style="height: 150px; width: 150px ;border-style: ridge; border-width: 5px ;" src="http://avighnatechnology.com/images/dummyselect.jpg"/> 
-                                                <asp:FileUpload ID="FileUpload1" multiple="true"  onchange="readURL(this);"  runat="server" Height="22px" accept=".png,.jpg,.jpeg,.gif" /><br /> 
-                                   
-                                        </div>  
-
                                     <div class="table-responsive">
                                         <table id="" class="table table-bordered table-info table-colored">
                                             <thead>
@@ -104,8 +99,6 @@
                                     <div class="form-group row">
                                         <div class="col-sm-12">
                                             <div class="button-list" id="hover">
-                                                <asp:Button ID="btnsave" runat="server" Text="save" OnClick="btnsave_Click" />
-
                                                 <a class="btn btn-success btn-bordered waves-effect w-md waves-light col-md-1" runat="server" >Save </a>
                                                 <a class="btn btn-danger btn-bordered waves-effect w-md waves-light col-md-1" href="orderFormList.aspx" runat="server">Cancel </a>
                                             </div>
@@ -120,24 +113,6 @@
             <!-- end row -->
         </div> <!-- container -->
     </div> <!-- content -->
-    <script type="text/javascript">
-
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function (e) {
-                    $('.blah')
-                    .attr('src', e.target.result)
-                    .width(150)
-                    .height(150);
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-      
-      
-</script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="footer" runat="server">

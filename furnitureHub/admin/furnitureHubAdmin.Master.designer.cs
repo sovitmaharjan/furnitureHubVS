@@ -13,6 +13,24 @@ namespace furnitureHub.admin {
     public partial class furnitureHubAdmin {
         
         /// <summary>
+        /// usernameAspx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal usernameAspx;
+        
+        /// <summary>
+        /// username2Aspx control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal username2Aspx;
+        
+        /// <summary>
         /// content control.
         /// </summary>
         /// <remarks>

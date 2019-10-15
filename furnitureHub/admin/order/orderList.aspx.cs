@@ -25,8 +25,7 @@ namespace furnitureHub.admin.orderFrom {
 
             DataTable dataTable = furnitureHubObject.orderList();
             string tableBodyRow = "";
-            foreach (DataRow value in dataTable.Rows)
-            {
+            foreach (DataRow value in dataTable.Rows) {
 
                 tableBodyRow += "<tr>";
                 tableBodyRow += "<td>" + value["id"] + "</td>";
@@ -37,7 +36,6 @@ namespace furnitureHub.admin.orderFrom {
                 tableBodyRow += "<td><div class='button-list'><a id='" + value["id"] + "' class='btn btn-pink w-sm waves-effect waves-light btn-sm item' data-toggle='modal' data-target='#myModal'><i class='mdi mdi-cart'></i> <span>Item </span></a></div></td>";
                 tableBodyRow += "<td><div class='button-list'><a id='" + value["id"] + "' class='btn btn-warning w-sm waves-effect waves-light btn-sm item'><i class='mdi mdi-pencil'></i> <span>Edit </span></a></div></td>";
                 tableBodyRow += "</tr>";
-
             }
             tableBody.Text = tableBodyRow;
         }

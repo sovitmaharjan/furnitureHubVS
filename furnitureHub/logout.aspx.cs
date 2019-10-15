@@ -39,8 +39,6 @@ namespace furnitureHub {
 
         public void loginClick(object sender, System.EventArgs e) {
 
-            Response.Redirect("~/admin/dashboard/dashboard.aspx");
-
             string userName = userNameAspx.Value;
             string password = passwordAspx.Value;
             DataTable dataTable = furnitureHubObject.getLoginData(userName, password);
