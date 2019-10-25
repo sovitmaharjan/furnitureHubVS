@@ -46,33 +46,38 @@ namespace furnitureHub.admin {
 
         public void txt(object sender, EventArgs e) {
 
-            DataTable dataTable = furnitureHubObject.orderList();
-            //string path = @"D:\test\test.dat";
-            //if(!File.Exists(path)) {
-            //    var file = File.Create(path);
-            //    file.Close();
-            //    TextWriter tw = new StreamWriter(path);
-            //    foreach(DataRow value in dataTable.Rows) {
-
-            //        tw.WriteLine(value["id"] + ", " + value["type"] + ", " + value["productionForm"] + ", " + value["customerId"] + ", " + value["customerName"] + ", " + value["customerNumber"]);
-            //    }
-            //    tw.Close();
-            //}else {
-            //    File.Delete(path);
-            //    var file = File.Create(path);
-            //    file.Close();
-            //    TextWriter tw = new StreamWriter(path);
-            //    foreach(DataRow value in dataTable.Rows) {
-
-            //        tw.WriteLine(value["id"] + ", " + value["type"] + ", " + value["productionForm"] + ", " + value["customerId"] + ", " + value["customerName"] + ", " + value["customerNumber"]);
-            //    }
-            //    tw.Close();
-            //}
+            DataTable dataTable = furnitureHubObject.rptAttendanceDataTest();
             MemoryStream ms = new MemoryStream();
             TextWriter tw = new StreamWriter(ms);
+            string date = Convert.ToDateTime(dataTable.Rows[0]["tdate"]).ToString("yyyy-MM-dd");
+            string[] splitDate = date.Split('-');
+            string yy = splitDate[0];
+            string mm = splitDate[1];
             foreach(DataRow value in dataTable.Rows) {
 
-                tw.WriteLine(value["id"] + ", " + value["orderDate"] + ", " + value["productionForm"] + ", " + value["customerName"] + ", " + value["customerNumber"]);
+                string tdate = Convert.ToDateTime(value["tdate"]).ToString("yyyy-MM-dd");
+                string[] splitTdate = tdate.Split('-');
+                string finalTdate = splitTdate[0] + splitTdate[1] + splitTdate[2];
+                string status;
+                string time;
+                if(string.IsNullOrEmpty(value["OT_Values"].ToString())) {
+
+                    if(string.IsNullOrEmpty(value["InTime"].ToString())) {
+
+                        status = "ABS";
+                        time = "0";
+                    } else {
+
+                        status = "PRE";
+                        time = "1";
+                    }
+                }else {
+
+                    status = "OT";
+                    TimeSpan spWorkMin = TimeSpan.FromMinutes(Convert.ToInt32(value["OT_Values"]));
+		            time = spWorkMin.ToString(@"h\.mm");
+                }
+                tw.WriteLine(value["Emp_id"] + "," +finalTdate + "," + status + "," + time);
             }
             tw.Flush();
             byte[] bytes = ms.ToArray();
@@ -80,9 +85,9 @@ namespace furnitureHub.admin {
 
             Response.Clear();
             Response.ContentType = "application/force-download";
-            Response.AddHeader("content-disposition", "attachment; filename=file.dat");
+            Response.AddHeader("content-disposition", "attachment; filename=file" + yy + mm + ".dat");
             Response.BinaryWrite(bytes);
-            Response.End(); 
+            Response.End();
         }
     }
 }

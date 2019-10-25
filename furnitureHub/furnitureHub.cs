@@ -17,7 +17,7 @@ namespace furnitureHub {
             return "http://localhost:10001";
         }
 
-        //--------------------------------------------global function somthing like that--------------------------------------------
+        //--------------------------------------------global function something like that--------------------------------------------
         public DataTable queryFunction(string query) {
 
             connection.Open();
@@ -35,6 +35,12 @@ namespace furnitureHub {
         //    SqlCommand command = new SqlCommand(query, connection);
         //    connection.Close();
         //}
+
+        public DataTable rptAttendanceDataTest() {
+
+            string query = "select * from rpt_attendance_data";
+            return queryFunction(query);
+        }
 
         //--------------------------------------------login--------------------------------------------
         public DataTable getLoginData(string userName, string password) {

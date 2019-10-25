@@ -211,7 +211,7 @@
                             </li>
 
                             <li>
-                                <a href="<%=this.baseUrl%>/admin/customer/customerList.aspx" class="waves-effect"><i class=" mdi mdi-account-network"></i><span>Customer </span> </a>
+                                <a href="<%=this.baseUrl%>/admin/customer/customerList.aspx" class="waves-effect"><i class="mdi mdi-account-network"></i><span>Customer </span> </a>
                             </li>
 
                             <li class="has_sub">
